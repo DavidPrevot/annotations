@@ -16,7 +16,7 @@ class FileCacheReaderTest extends AbstractReaderTest
         return new FileCacheReader(new AnnotationReader(), $this->cacheDir);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         foreach (glob($this->cacheDir.'/*.php') AS $file) {
             unlink($file);
